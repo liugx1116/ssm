@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
+
     <!--
         MyBatis核心配置文件中，标签的顺序：
         properties?,settings?,typeAliases?,typeHandlers?,
@@ -13,7 +14,10 @@
 
     <!--引入properties文件-->
     <properties resource="db.properties"/>
-
+    <settings>
+        <!-- 打印查询语句 -->
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
     <!--设置类型别名-->
     <typeAliases>
         <!--
@@ -77,4 +81,5 @@
         -->
         <package name="com.atgx.ssm.mapper"/>
     </mappers>
+
 </configuration>
